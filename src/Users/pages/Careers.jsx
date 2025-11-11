@@ -1,8 +1,11 @@
 import React from 'react'
 import Header from '../components/Header'
-import { Button, Card, TextInput } from 'flowbite-react'
+import { Button, Card, Checkbox, Label, Modal, ModalBody, ModalHeader, TextInput } from "flowbite-react";
+import { useRef, useState } from "react";
 
 function Careers() {
+    const [openModal, setOpenModal] = useState(true);
+  // const emailInputRef = useRef<HTMLInputElement>(null);
   return (
     <>
     <Header/>
@@ -38,7 +41,7 @@ function Careers() {
             <h5>Job Title</h5>
             <hr />
         </p>
-           <Button className='ml-5'>Apply</Button>
+           <Button className='ml-5' onClick={() => setOpenModal(true)}>Apply</Button>
        </div>
        {/* description */}
 
@@ -59,7 +62,7 @@ function Careers() {
             <h5>Job Title</h5>
             <hr />
         </p>
-           <Button className='ml-5'>Apply</Button>
+           <Button className='ml-5' onClick={() => setOpenModal(true)}>Apply</Button>
        </div>
        {/* description */}
 
@@ -74,6 +77,56 @@ function Careers() {
       </Card>
     </div>
 
+    {/* Modal code  */}
+
+      <Modal show={openModal} size="md" popup onClose={() => setOpenModal(false)} >
+        <ModalHeader />
+        <ModalBody>
+          <div className="space-y-6">
+            <h3 className="text-xl font-medium text-gray-900">Application Form</h3>
+          <form className="p-6 space-y-6" >
+                        {/* Input Grid */}
+                        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'> 
+                            {['Name', 'Qualification', 'Email', 'Phone'].map(label => (
+                                <div key={label}>
+                                    <label htmlFor={label} className="block text-sm font-medium text-gray-700 mb-1">{label}</label>
+                                    <input 
+                                        type={label === 'Email' ? 'email' : label === 'Phone' ? 'tel' : 'text'} 
+                                        id={label.toLowerCase().replace(' ', '-')} 
+                                        placeholder={label} 
+                                        className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" 
+                                        required 
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                        
+                        {/* Cover Letter */}
+                        <div>
+                            <label htmlFor="cover-letter" className="block text-sm font-medium text-gray-700 mb-1">Cover Letter</label>
+                            <textarea id="cover-letter" rows="4" className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="Type your cover letter here..."></textarea>
+                        </div>
+                        
+                        {/* Resume Upload */}
+                        <div>
+                            <label htmlFor="resume" className="block text-sm font-medium text-gray-700 mb-1">Resume</label>
+                            <input type="file" id="resume" className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100 cursor-pointer" />
+                        </div>
+
+                        {/* Form Buttons */}
+                        <div className="flex justify-end space-x-3 pt-2">
+                            <button type="reset" className="bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-2 px-4 rounded-lg shadow-md transition duration-200">
+                                Reset
+                            </button>
+                            <button type="submit" className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg shadow-md transition duration-200">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+           
+          </div>
+        </ModalBody>
+      </Modal>
     </>
   )
 }
