@@ -2,8 +2,7 @@ import React from 'react'
 import AdminHeader from '../components/AdminHeader'
 import AppFooter from '../../components/AppFooter'
 import { Card } from 'flowbite-react'
-import { Sidebar, SidebarCollapse, SidebarItem, SidebarItemGroup, SidebarItems } from "flowbite-react";
-import { HiArrowSmRight, HiChartPie, HiInbox, HiShoppingBag, HiTable, HiUser } from "react-icons/hi";
+import AdminSidebar from '../components/AdminSidebar'
 
 function AdminHome() {
   return (
@@ -15,28 +14,7 @@ function AdminHome() {
     <div className='flex justify-start gap-20 mb-20 mt-10'>
       {/* side slider */}
       <div>
-       <Sidebar aria-label="Sidebar with multi-level dropdown example">
-      <SidebarItems>
-        <img src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png" alt=""  width={'100px'} height={'100px'}/>
-        <h6 className='text-star'>Admin </h6>
-        <SidebarItemGroup>
-        
-          <SidebarItem href="#">
-            Home
-          </SidebarItem>
-          <SidebarItem href="#" >
-            All-Books
-          </SidebarItem>
-          <SidebarItem href="#" >
-          Careers
-          </SidebarItem>
-          <SidebarItem href="#" >
-            Settings
-          </SidebarItem>
-         
-        </SidebarItemGroup>
-      </SidebarItems>
-    </Sidebar>
+     <AdminSidebar/>
       </div>
       {/* charts */}
       <div>
