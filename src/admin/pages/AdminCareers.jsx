@@ -2,9 +2,13 @@ import React from 'react'
 import AdminHeader from '../components/AdminHeader'
 import AdminSidebar from '../components/AdminSidebar'
 import AppFooter from '../../components/AppFooter'
-import { Button, Card, TabItem, Tabs, TextInput } from "flowbite-react";
+import {  Card, TabItem, Tabs, Textarea, TextInput } from "flowbite-react";
 import { Table, TableBody, TableCell, TableHead, TableHeadCell, TableRow } from "flowbite-react";
+import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from "flowbite-react";
+import { useState } from "react";
+
 function AdminCareers() {
+   const [openModal, setOpenModal] = useState(true);
   return (
     <>
     <AdminHeader/>
@@ -29,7 +33,7 @@ function AdminCareers() {
               <Button>Search</Button>
               </div>
 
-              <Button>Add Job+</Button>
+              <Button onClick={() => setOpenModal(true)}>Add Job+</Button>
            
           </div>
 
@@ -274,6 +278,30 @@ function AdminCareers() {
         </div>
       </div>
     </div>
+
+    {/* modal for add job */}
+
+     <Modal show={openModal} onClose={() => setOpenModal(false)}>
+        <ModalHeader>Application Form</ModalHeader>
+        <ModalBody>
+          <div>
+            <TextInput className='mb-3' placeholder='Job-Title'></TextInput>
+            <TextInput className='mb-3' placeholder='Location'></TextInput>
+            <TextInput className='mb-3' placeholder='Job-Type'></TextInput>
+            <TextInput className='mb-3' placeholder='Salary'></TextInput>
+            <TextInput className='mb-3' placeholder='Qualification'></TextInput>
+            <TextInput className='mb-3' placeholder='Experience'></TextInput>
+            <Textarea className='mb-3'></Textarea>
+          </div>
+        </ModalBody>
+        <ModalFooter>
+          <Button >Add</Button>
+          <Button color="alternative">
+            Reset
+          </Button>
+        </ModalFooter>
+      </Modal>
+
 
     <AppFooter/>
     </>
