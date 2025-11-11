@@ -7,6 +7,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeadCell, TableRow } from 
 function AdminCareers() {
   return (
     <>
+    <AdminHeader/>
     <div className='flex justify-start gap-20 w-full'>
       <div>
         {/* side bar */}
@@ -273,6 +274,8 @@ function AdminCareers() {
         </div>
       </div>
     </div>
+
+    <AppFooter/>
     </>
   )
 }
