@@ -4,6 +4,7 @@ import { Button, Card, TextInput } from 'flowbite-react'
 import { FaSearch } from "react-icons/fa";
 import { Label, Radio } from "flowbite-react";
 import AppFooter from '../../components/AppFooter';
+import { Link } from 'react-router-dom';
 
 function AllBooks() {
   return (
@@ -87,7 +88,7 @@ function AllBooks() {
 <h4>Book Name</h4>
 <p>type</p>
 <p>$</p>
-<Button>Know More</Button>
+<Link to={'/view-books/:id'}><Button>Know More</Button></Link>
 </Card>
 
 <Card className='w-80  p-0' style={{backgroundColor:'white'}}>
@@ -98,7 +99,7 @@ function AllBooks() {
 <h4>Book Name</h4>
 <p>type</p>
 <p>$</p>
-<Button>Know More</Button>
+<Link to={'/view-books/'}><Button>Know More</Button></Link>
 </Card>
 
 <Card className='w-80  p-0' style={{backgroundColor:'white'}}>
