@@ -10,7 +10,11 @@ function Profile() {
       <Header />
 
 
-      <div className=' w-full h-50' style={{ backgroundColor: 'rgba(237, 126, 15, 0.67)' }}>
+      <div className=' w-full h-60'   style={{ 
+    backgroundColor: 'rgba(237, 126, 15, 0.67)', 
+    backgroundImage: `url('https://i.pinimg.com/736x/c6/ed/83/c6ed83e876272895a3b5c15f094210b9.jpg')` ,
+  
+  }}>
         {/* Top Background */}
       </div>
 

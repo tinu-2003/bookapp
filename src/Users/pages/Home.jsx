@@ -12,11 +12,17 @@ function Home() {
 
       {/* first section with search */}
 
-      <div style={{ width: '100%', height: '500px', backgroundColor: '#5e5f605e', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+      <div style={{ width: '100%', height: '500px', backgroundColor: '#5e5f605e', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column',
+        backgroundImage:`url('https://i.pinimg.com/1200x/40/07/79/400779b11c63675794518da05b7d7d8e.jpg')`,
+        // marginTop:'-50px',
+        backgroundPosition:'center',
+        backgroundRepeat:'no-repeat',
+        backgroundSize:'cover'
+       }}>
         {/* Text */}
         <div style={{ marginBottom: 50, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-          <h2 className='text-2xl font-bold italic mb-5' style={{ fontSize: 50, fontWeight: 600 }}>Wonderful Gifts</h2>
-          <p className='text-xl font-semibold italic' style={{ fontWeight: 500 }}>Give Your Family And Friends a Book</p>
+          <h2 className='text-2xl font-bold italic mb-5 text-[#FDFBF1]' style={{ fontSize: 50, fontWeight: 600 }}>Wonderful Gifts</h2>
+          <p className='text-xl font-semibold italic text-[#FDFBF1]' style={{ fontWeight: 500 }}>Give Your Family And Friends a Book</p>
         </div>
 
         {/* search bar */}

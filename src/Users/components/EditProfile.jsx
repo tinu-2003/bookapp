@@ -9,7 +9,7 @@ function EditProfile() {
   return (
     <>
 
-      <Button color="alternative" onClick={() => setIsOpen(true)} >Edit</Button>
+      <Button color="blue" onClick={() => setIsOpen(true)} >Edit</Button>
       {/* off canvac */}
       <Drawer open={isOpen} onClose={handleClose}>
         <DrawerHeader title="Edit" />
