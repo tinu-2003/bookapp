@@ -8,14 +8,20 @@ function AdminSettings() {
     <>
       <AdminHeader />
       {/* settings page */}
-      <div className='flex justify-start gap-15 m-10 '>
+      <div className='flex justify-start  '>
         {/* side bar */}
         <div>
           <AdminSidebar />
         </div>
         {/* contained */}
         <div style={{ width: '100%' }}>
-          <h3 className='text-center font-bold italic text-3xl'>Settings</h3>
+          <h3 className='text-center font-bold italic text-3xl flex justify-center items-center text-white' style={{ width: '100% ', backgroundImage:`url('https://i.pinimg.com/1200x/8d/c2/f0/8dc2f090577b59234560a901e4f05c8c.jpg')`, height:'250px',
+            backgroundPosition:'center',
+            backgroundRepeat:'no-repeat',
+            backgroundSize:'cover',
+            // borderRadius:'50px'
+            boxShadow:'4px 4px 8px black'
+           }}>Settings</h3>
 
           <div className='mt-10 flex justify-between gap-4 mb-10 ' style={{ width: '100%' }}>
             {/* content */}

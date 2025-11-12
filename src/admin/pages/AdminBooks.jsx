@@ -9,7 +9,7 @@ function AdminBooks() {
 
       <AdminHeader />
 
-      <div className='flex justify-start gap-20 w-full'>
+      <div className='flex justify-start  w-full'>
         <div>
           {/* side bar */}
           <AdminSidebar />
@@ -17,10 +17,16 @@ function AdminBooks() {
 
         {/* Books */}
 
-        <div className='flex flex-col justify-center align-center'>
-          <h3 className='text-center font-bold italic text-3xl ' style={{ width: '100%  ' }}>All books</h3>
+        <div className='flex flex-col justify-center align-center w-full' >
+          <h3 className='text-center font-bold italic text-3xl flex justify-center  items-center text-white ' style={{ width: '100% ', backgroundImage:`url('https://i.pinimg.com/1200x/37/85/30/378530a945927b8d2054808fa0b85386.jpg')`, height:'250px',
+            backgroundPosition:'center',
+            backgroundRepeat:'no-repeat',
+            backgroundSize:'cover',
+            // borderRadius:'50px'
+            boxShadow:'4px 4px 8px black'
+           }}>All books</h3>
 
-          <div className='mt-10 p-8  ' style={{ width: '900px' }}>
+          <div className=' p-5  ' style={{ width: '100%' }}>
             <Tabs aria-label="Default tabs" variant="default">
               <TabItem active title="Book List" >
                 <div className='flex justify-center  gap-3 flex-wrap'>

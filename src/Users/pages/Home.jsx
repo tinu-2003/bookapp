@@ -17,7 +17,8 @@ function Home() {
         // marginTop:'-50px',
         backgroundPosition:'center',
         backgroundRepeat:'no-repeat',
-        backgroundSize:'cover'
+        backgroundSize:'cover',
+        backgroundAttachment:'fixed'
        }}>
         {/* Text */}
         <div style={{ marginBottom: 50, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>

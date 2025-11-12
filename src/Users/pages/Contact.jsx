@@ -7,11 +7,17 @@ import { Button, Card, Textarea, TextInput } from 'flowbite-react';
 function Contact() {
   return (
     <>
-      <Header />
+      <Header />  
       {/* heading */}
-      <div>
-        <h3 className='text-center font-bold text-2xl mt-4 italic'>Contacts</h3>
-        <p className='text-center p-5 ml-25 mr-25 leading-relaxed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem corrupti doloremque veniam assumenda at, magi nesciunt molestias praesentium possimus blanditiis velit!
+      <div style={{
+        backgroundImage:`url('https://i.pinimg.com/736x/97/51/0d/97510d9383ebda0b92aa8968e43a5b27.jpg')`,
+        width:'100%',
+        height:'250px',
+        backgroundPosition:'center',
+        // backgroundSize:'fit'
+      }}>
+        <h3 className='text-center font-bold text-3xl  italic p-4'>Contacts</h3>
+        <p className='text-center p-5 ml-25 mr-25 leading-relaxed '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem corrupti doloremque veniam assumenda at, magi nesciunt molestias praesentium possimus blanditiis velit!
           Amet dolore tempore quos repudiandae excepturi facilis esse quibusdam voluptates alias reiciendis quam quo corporis dolorum, omnis sunt evenietevenietevenietevenieteveniet laborum impedit, veniam quis cupiditate veritatis tenetur voluptatem? Error, labore ex.</p>
       </div>
 

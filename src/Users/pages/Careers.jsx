@@ -10,8 +10,15 @@ function Careers() {
       <Header />
 
       {/* heading */}
-      <div className='text-center mt-10'>
-        <h2 className='sm:text-2xl md:text-4xl font-bold italic'>Careers</h2>
+      <div className='text-center text-black ' style={{
+        backgroundImage:`url('https://i.pinimg.com/1200x/e4/10/6a/e4106ab7a221e50b98ae1697e33ccb66.jpg')`,
+       width:'100%',
+       height:'250px',
+       backgroundPosition:'center',
+       backgroundRepeat:'no-repeat',
+       backgroundSize:'cover'
+      }}>
+        <h2 className='sm:text-2xl md:text-4xl font-bold italic p-4'>Careers</h2>
         <p className='font-light italic px-4 sm:px-8 md:px-40  text-justify leading-relaxed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quos pariatur facere aliquam at, similique accusantium architecto fugiat. Tempore doloremque cumque ipsa sapiente nobis incidunt cum esse neque, dignissimos dolore! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit quisquam vel amet sint voluptatem, recusandae dolores sunt consectetur a. Fuga assumenda architecto incidunt deleniti magnam placeat quisquam totam recusandae autem? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet inventore similique deleniti magnam exercitationem eligendi, aspernatur aut eveniet laborum, ut ducimus esse dignissimos fugiat voluptate laboriosam dicta, voluptatem temporibus ad?</p>
       </div>
 

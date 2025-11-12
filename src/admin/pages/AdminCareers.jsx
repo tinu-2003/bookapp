@@ -11,7 +11,7 @@ function AdminCareers() {
   return (
     <>
       <AdminHeader />
-      <div className='flex justify-start gap-20 w-full'>
+      <div className='flex justify-start  w-full'>
         <div>
           {/* side bar */}
           <AdminSidebar />
@@ -19,11 +19,17 @@ function AdminCareers() {
 
         {/* Books */}
 
-        <div className='flex flex-col justify-center align-center'>
-          <h3 className='text-center font-bold italic text-3xl ' style={{ width: '100%  ' }}>Careers</h3>
+        <div className='flex flex-col justify-center align-center w-full'>
+          <h3 className='text-center font-bold italic text-4xl flex justify-center items-center text-white ' style={{ width: '100% ', backgroundImage:`url('https://i.pinimg.com/1200x/84/52/5c/84525c567ae78c8e0a1dbd31804065d1.jpg')`, height:'250px',
+            backgroundPosition:'center',
+            backgroundRepeat:'no-repeat',
+            backgroundSize:'cover',
+            // borderRadius:'50px'
+            boxShadow:'4px 4px 8px black'
+           }}>Careers</h3>
 
-          <div className='mt-10 p-8  ' style={{ width: '900px' }}>
-            <Tabs aria-label="Default tabs" variant="default">
+          <div className='mt-10 p-8 items-center justify-center flex  ' style={{ width: '100%' }}>
+            <Tabs aria-label="Default tabs" variant="default" className='w-full'>
               <TabItem active title="Job Post" >
                 {/* search and add button */}
                 <div className='flex justify-between mt-5'>
